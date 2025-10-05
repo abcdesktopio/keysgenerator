@@ -2,9 +2,9 @@ FROM alpine:latest
 
 ARG KUBECTL_VERSION=v1.33.1
 
-RUN apk update \
- && apk upgrade \
- && apk add --no-cache --update \
+RUN apk upgrade --no-cache && \
+    apk update --no-cache && \
+    apk add --no-cache --update \
     openssl \
     kubectl \
     curl \
