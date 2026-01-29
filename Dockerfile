@@ -12,5 +12,4 @@ RUN apk upgrade --no-cache && \
     ca-certificates
 
 RUN openssl version && kubectl version --client
-
 CMD ["/bin/sh"]
